@@ -38,7 +38,7 @@ checkdeps() {
 	apt update -y &> /dev/null
 	echo " [*] Checking for all required tools..."
 
-	for i in proot axel ; do
+	for i in proot axel apk-mark ; do
 		if [ -e $PREFIX/bin/$i ]; then
 			echo "  • $i is OK"
 		else

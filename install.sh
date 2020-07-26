@@ -15,15 +15,6 @@ proot_patch() {
 				apk-mark hold proot 		
 	}
 
-setchroot() {
-	chroot=minimal
-}
-unknownarch() {
-	printf "$red"
-	echo "[*] Unknown Architecture :("
-	printf "$reset"
-	exit
-}
 
 checksysinfo() {
 	printf "$blue [*] Checking host architecture ..."
@@ -61,3 +52,10 @@ checkdeps() {
 		fi
 	done
 }
+
+clear
+checksysinfo
+checkdeps
+proot_patch
+
+

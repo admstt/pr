@@ -38,7 +38,7 @@ checkdeps() {
 	apt update -y &> /dev/null
 	echo " [*] Checking for all required tools..."
 
-	for i in proot ; do
+	for i in proot axel ; do
 		if [ -e $PREFIX/bin/$i ]; then
 			echo "  • $i is OK"
 		else

@@ -1,1 +1,1 @@
-```sh i```
+```sh install.sh```
